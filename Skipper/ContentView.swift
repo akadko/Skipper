@@ -7,10 +7,15 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+      VStack {
+        TrackMap()
+        GyroscopeInfo()
+      }
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .padding()
     }
 }
 

@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SkipperApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  let appState = AppState()
+  
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+        .environmentObject(appState)
+        .environment(\.gyroscopeViewModel, GyroscopeViewModel(appState))
     }
+  }
 }

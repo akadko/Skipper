@@ -11,6 +11,15 @@
 		7CD0048E27932A0E00F2CDD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD0048D27932A0E00F2CDD0 /* ContentView.swift */; };
 		7CD0049027932A1000F2CDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD0048F27932A1000F2CDD0 /* Assets.xcassets */; };
 		7CD0049327932A1000F2CDD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD0049227932A1000F2CDD0 /* Preview Assets.xcassets */; };
+		7CD0049B27932AEF00F2CDD0 /* TrackMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD0049A27932AEF00F2CDD0 /* TrackMap.swift */; };
+		7CD0049D27932C4C00F2CDD0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD0049C27932C4C00F2CDD0 /* Card.swift */; };
+		7CD004A127932D2900F2CDD0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD004A027932D2900F2CDD0 /* MapKit.framework */; };
+		7CD004A3279336DF00F2CDD0 /* GyroscopeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004A2279336DF00F2CDD0 /* GyroscopeInfo.swift */; };
+		7CD004A92793377300F2CDD0 /* GyroscopeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004A82793377300F2CDD0 /* GyroscopeState.swift */; };
+		7CD004AB279337B600F2CDD0 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004AA279337B600F2CDD0 /* Tracking.swift */; };
+		7CD004AD2793381300F2CDD0 /* GyroscopeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004AC2793381300F2CDD0 /* GyroscopeViewModel.swift */; };
+		7CD004AF27933E6A00F2CDD0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004AE27933E6A00F2CDD0 /* AppState.swift */; };
+		7CD004B12793444500F2CDD0 /* EnvironmentKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004B02793444500F2CDD0 /* EnvironmentKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,16 @@
 		7CD0048D27932A0E00F2CDD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7CD0048F27932A1000F2CDD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CD0049227932A1000F2CDD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7CD0049A27932AEF00F2CDD0 /* TrackMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMap.swift; sourceTree = "<group>"; };
+		7CD0049C27932C4C00F2CDD0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		7CD0049E27932D2900F2CDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7CD004A027932D2900F2CDD0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7CD004A2279336DF00F2CDD0 /* GyroscopeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroscopeInfo.swift; sourceTree = "<group>"; };
+		7CD004A82793377300F2CDD0 /* GyroscopeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroscopeState.swift; sourceTree = "<group>"; };
+		7CD004AA279337B600F2CDD0 /* Tracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
+		7CD004AC2793381300F2CDD0 /* GyroscopeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroscopeViewModel.swift; sourceTree = "<group>"; };
+		7CD004AE27933E6A00F2CDD0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		7CD004B02793444500F2CDD0 /* EnvironmentKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD004A127932D2900F2CDD0 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +57,7 @@
 			children = (
 				7CD0048A27932A0E00F2CDD0 /* Skipper */,
 				7CD0048927932A0E00F2CDD0 /* Products */,
+				7CD0049F27932D2900F2CDD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +72,13 @@
 		7CD0048A27932A0E00F2CDD0 /* Skipper */ = {
 			isa = PBXGroup;
 			children = (
+				7CD004A72793376000F2CDD0 /* Models */,
+				7CD004A42793371D00F2CDD0 /* ViewModels */,
+				7CD0049E27932D2900F2CDD0 /* Info.plist */,
+				7CD0049927932ADC00F2CDD0 /* Views */,
 				7CD0048B27932A0E00F2CDD0 /* SkipperApp.swift */,
 				7CD0048D27932A0E00F2CDD0 /* ContentView.swift */,
+				7CD004B02793444500F2CDD0 /* EnvironmentKeys.swift */,
 				7CD0048F27932A1000F2CDD0 /* Assets.xcassets */,
 				7CD0049127932A1000F2CDD0 /* Preview Content */,
 			);
@@ -65,6 +91,42 @@
 				7CD0049227932A1000F2CDD0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7CD0049927932ADC00F2CDD0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CD0049A27932AEF00F2CDD0 /* TrackMap.swift */,
+				7CD0049C27932C4C00F2CDD0 /* Card.swift */,
+				7CD004A2279336DF00F2CDD0 /* GyroscopeInfo.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7CD0049F27932D2900F2CDD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CD004A027932D2900F2CDD0 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CD004A42793371D00F2CDD0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7CD004AC2793381300F2CDD0 /* GyroscopeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7CD004A72793376000F2CDD0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7CD004A82793377300F2CDD0 /* GyroscopeState.swift */,
+				7CD004AA279337B600F2CDD0 /* Tracking.swift */,
+				7CD004AE27933E6A00F2CDD0 /* AppState.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +199,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD004AB279337B600F2CDD0 /* Tracking.swift in Sources */,
 				7CD0048E27932A0E00F2CDD0 /* ContentView.swift in Sources */,
+				7CD004AD2793381300F2CDD0 /* GyroscopeViewModel.swift in Sources */,
+				7CD004AF27933E6A00F2CDD0 /* AppState.swift in Sources */,
 				7CD0048C27932A0E00F2CDD0 /* SkipperApp.swift in Sources */,
+				7CD004B12793444500F2CDD0 /* EnvironmentKeys.swift in Sources */,
+				7CD0049B27932AEF00F2CDD0 /* TrackMap.swift in Sources */,
+				7CD004A92793377300F2CDD0 /* GyroscopeState.swift in Sources */,
+				7CD0049D27932C4C00F2CDD0 /* Card.swift in Sources */,
+				7CD004A3279336DF00F2CDD0 /* GyroscopeInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +342,11 @@
 				DEVELOPMENT_TEAM = XY6QAMY6XH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Skipper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gyroscope;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -302,9 +374,11 @@
 				DEVELOPMENT_TEAM = XY6QAMY6XH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Skipper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gyroscope;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
