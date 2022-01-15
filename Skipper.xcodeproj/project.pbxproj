@@ -16,10 +16,12 @@
 		7CD004A127932D2900F2CDD0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD004A027932D2900F2CDD0 /* MapKit.framework */; };
 		7CD004A3279336DF00F2CDD0 /* GyroscopeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004A2279336DF00F2CDD0 /* GyroscopeInfo.swift */; };
 		7CD004A92793377300F2CDD0 /* GyroscopeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004A82793377300F2CDD0 /* GyroscopeState.swift */; };
-		7CD004AB279337B600F2CDD0 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004AA279337B600F2CDD0 /* Tracking.swift */; };
+		7CD004AB279337B600F2CDD0 /* TrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004AA279337B600F2CDD0 /* TrackingState.swift */; };
 		7CD004AD2793381300F2CDD0 /* GyroscopeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004AC2793381300F2CDD0 /* GyroscopeViewModel.swift */; };
 		7CD004AF27933E6A00F2CDD0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004AE27933E6A00F2CDD0 /* AppState.swift */; };
 		7CD004B12793444500F2CDD0 /* EnvironmentKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004B02793444500F2CDD0 /* EnvironmentKeys.swift */; };
+		7CD004B327935D0E00F2CDD0 /* TrackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004B227935D0E00F2CDD0 /* TrackingViewModel.swift */; };
+		7CD004B527936AB200F2CDD0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004B427936AB200F2CDD0 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +36,12 @@
 		7CD004A027932D2900F2CDD0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7CD004A2279336DF00F2CDD0 /* GyroscopeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroscopeInfo.swift; sourceTree = "<group>"; };
 		7CD004A82793377300F2CDD0 /* GyroscopeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroscopeState.swift; sourceTree = "<group>"; };
-		7CD004AA279337B600F2CDD0 /* Tracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
+		7CD004AA279337B600F2CDD0 /* TrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingState.swift; sourceTree = "<group>"; };
 		7CD004AC2793381300F2CDD0 /* GyroscopeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroscopeViewModel.swift; sourceTree = "<group>"; };
 		7CD004AE27933E6A00F2CDD0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		7CD004B02793444500F2CDD0 /* EnvironmentKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentKeys.swift; sourceTree = "<group>"; };
+		7CD004B227935D0E00F2CDD0 /* TrackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewModel.swift; sourceTree = "<group>"; };
+		7CD004B427936AB200F2CDD0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 				7CD0049A27932AEF00F2CDD0 /* TrackMap.swift */,
 				7CD0049C27932C4C00F2CDD0 /* Card.swift */,
 				7CD004A2279336DF00F2CDD0 /* GyroscopeInfo.swift */,
+				7CD004B427936AB200F2CDD0 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				7CD004AC2793381300F2CDD0 /* GyroscopeViewModel.swift */,
+				7CD004B227935D0E00F2CDD0 /* TrackingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -123,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				7CD004A82793377300F2CDD0 /* GyroscopeState.swift */,
-				7CD004AA279337B600F2CDD0 /* Tracking.swift */,
+				7CD004AA279337B600F2CDD0 /* TrackingState.swift */,
 				7CD004AE27933E6A00F2CDD0 /* AppState.swift */,
 			);
 			path = Models;
@@ -199,12 +205,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CD004AB279337B600F2CDD0 /* Tracking.swift in Sources */,
+				7CD004AB279337B600F2CDD0 /* TrackingState.swift in Sources */,
+				7CD004B527936AB200F2CDD0 /* MapView.swift in Sources */,
 				7CD0048E27932A0E00F2CDD0 /* ContentView.swift in Sources */,
 				7CD004AD2793381300F2CDD0 /* GyroscopeViewModel.swift in Sources */,
 				7CD004AF27933E6A00F2CDD0 /* AppState.swift in Sources */,
 				7CD0048C27932A0E00F2CDD0 /* SkipperApp.swift in Sources */,
 				7CD004B12793444500F2CDD0 /* EnvironmentKeys.swift in Sources */,
+				7CD004B327935D0E00F2CDD0 /* TrackingViewModel.swift in Sources */,
 				7CD0049B27932AEF00F2CDD0 /* TrackMap.swift in Sources */,
 				7CD004A92793377300F2CDD0 /* GyroscopeState.swift in Sources */,
 				7CD0049D27932C4C00F2CDD0 /* Card.swift in Sources */,

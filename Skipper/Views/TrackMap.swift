@@ -10,24 +10,31 @@ import SwiftUI
 import MapKit
 
 struct TrackMap: View {
-  @State private var userTrackingMode: MapUserTrackingMode = .follow
+  
+  @EnvironmentObject var appState: AppState
+  @Environment(\.trackingViewModel) var tracking: TrackingViewModel
+  
   @State private var region = MKCoordinateRegion(
           center: CLLocationCoordinate2D(
               latitude: 59.9311,
               longitude: 30.3609
           ),
           span: MKCoordinateSpan(
-            latitudeDelta: 0.05,
-            longitudeDelta: 0.05
+            latitudeDelta: 0.01,
+            longitudeDelta: 0.01
           )
       )
   
   var body: some View {
-    Map(
-      coordinateRegion: $region,
-      interactionModes: MapInteractionModes.all,
-      showsUserLocation: true,
-      userTrackingMode: $userTrackingMode
-    )
+    MapView(
+      region: $region,
+      lineCoordinates: appState.tracking.locationsCoordinates
+    ).onAppear {
+      tracking.start()
+    }.onReceive(self.appState.$tracking) { trackingState in
+      if let location = trackingState.locations.last {
+        self.region.center = location.coordinate
+      }
+    }
   }
 }

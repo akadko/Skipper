@@ -16,6 +16,7 @@ struct SkipperApp: App {
       ContentView()
         .environmentObject(appState)
         .environment(\.gyroscopeViewModel, GyroscopeViewModel(appState))
+        .environment(\.trackingViewModel, TrackingViewModel(appState))
     }
   }
 }

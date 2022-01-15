@@ -9,4 +9,5 @@ import Foundation
 
 class AppState: ObservableObject {
   @Published var gyro = GyroscopeState()
+  @Published var tracking = TrackingState()
 }
