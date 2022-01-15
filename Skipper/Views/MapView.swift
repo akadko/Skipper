@@ -16,19 +16,20 @@ struct MapView: UIViewRepresentable {
   let showsUserLocation = true
   let strokeColor = Color.primary
   let lineWidth = 4.0
+  let userTrackingMode: MKUserTrackingMode = .follow
   
   func makeUIView(context: Context) -> MKMapView {
     let mapView = MKMapView()
     mapView.delegate = context.coordinator
     mapView.region = region
     mapView.showsUserLocation = showsUserLocation
-    mapView.userTrackingMode = .followWithHeading
+    mapView.userTrackingMode = userTrackingMode
     drawPolyline(mapView)
     return mapView
   }
 
   func updateUIView(_ mapView: MKMapView, context: Context) {
-    mapView.setRegion(region, animated: true)
+    mapView.setRegion(mapView.region, animated: true)
     drawPolyline(mapView)
   }
 
@@ -37,6 +38,9 @@ struct MapView: UIViewRepresentable {
   }
   
   private func drawPolyline(_ mapView: MKMapView) {
+    if let existing = mapView.overlays.first(where: { $0 is MKPolyline }) {
+      mapView.removeOverlay(existing)
+    }
     let polyline = MKPolyline(coordinates: lineCoordinates, count: lineCoordinates.count)
     mapView.addOverlay(polyline)
   }
@@ -68,5 +72,9 @@ class Coordinator: NSObject, MKMapViewDelegate {
   func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
     region.wrappedValue.center = mapView.region.center
     region.wrappedValue.span = mapView.region.span
+  }
+  
+  func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+    self.region.wrappedValue = mapView.region
   }
 }

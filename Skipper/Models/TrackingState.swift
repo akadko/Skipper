@@ -9,10 +9,5 @@ import Foundation
 import CoreLocation
 
 struct TrackingState {
-  var locations: [CLLocation] = []
-  var locationsCoordinates: [CLLocationCoordinate2D] {
-    get {
-      locations.map { $0.coordinate }
-    }
-  }
+  var locations: [CLLocationCoordinate2D] = []
 }

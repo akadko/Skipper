@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-let significantDistance = 5.0 // meters
+let significantDistance = 3.0 // meters
 
 class TrackingViewModel: NSObject, CLLocationManagerDelegate {
   let locationManager = CLLocationManager()
@@ -22,6 +22,7 @@ class TrackingViewModel: NSObject, CLLocationManagerDelegate {
   func start() {
     if locationManager.delegate == nil {
       locationManager.delegate = self
+      locationManager.distanceFilter = significantDistance
     }
     switch (locationManager.authorizationStatus) {
     case .authorizedAlways, .authorizedWhenInUse:
@@ -38,9 +39,7 @@ class TrackingViewModel: NSObject, CLLocationManagerDelegate {
   
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     for location in locations {
-      if isDistanceSignificant(newLocation: location) {
-        self.appState.tracking.locations.append(location)
-      }
+      self.appState.tracking.locations.append(location.coordinate)
     }
   }
   
@@ -48,11 +47,7 @@ class TrackingViewModel: NSObject, CLLocationManagerDelegate {
     locationManager.startUpdatingLocation()
   }
   
-  func isDistanceSignificant(newLocation: CLLocation) -> Bool {
-    if let lastLocation = self.appState.tracking.locations.last {
-      let distance = newLocation.distance(from: lastLocation)
-      return distance > significantDistance
-    }
-    return true
+  func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    // process error
   }
 }

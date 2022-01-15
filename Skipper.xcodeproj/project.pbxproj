@@ -22,6 +22,7 @@
 		7CD004B12793444500F2CDD0 /* EnvironmentKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004B02793444500F2CDD0 /* EnvironmentKeys.swift */; };
 		7CD004B327935D0E00F2CDD0 /* TrackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004B227935D0E00F2CDD0 /* TrackingViewModel.swift */; };
 		7CD004B527936AB200F2CDD0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004B427936AB200F2CDD0 /* MapView.swift */; };
+		7CD004B82793927D00F2CDD0 /* UIWindow+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD004B72793927D00F2CDD0 /* UIWindow+Orientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		7CD004B02793444500F2CDD0 /* EnvironmentKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentKeys.swift; sourceTree = "<group>"; };
 		7CD004B227935D0E00F2CDD0 /* TrackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewModel.swift; sourceTree = "<group>"; };
 		7CD004B427936AB200F2CDD0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		7CD004B72793927D00F2CDD0 /* UIWindow+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Orientation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		7CD0048A27932A0E00F2CDD0 /* Skipper */ = {
 			isa = PBXGroup;
 			children = (
+				7CD004B62793926600F2CDD0 /* Extensions */,
 				7CD004A72793376000F2CDD0 /* Models */,
 				7CD004A42793371D00F2CDD0 /* ViewModels */,
 				7CD0049E27932D2900F2CDD0 /* Info.plist */,
@@ -133,6 +136,14 @@
 				7CD004AE27933E6A00F2CDD0 /* AppState.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7CD004B62793926600F2CDD0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7CD004B72793927D00F2CDD0 /* UIWindow+Orientation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 			files = (
 				7CD004AB279337B600F2CDD0 /* TrackingState.swift in Sources */,
 				7CD004B527936AB200F2CDD0 /* MapView.swift in Sources */,
+				7CD004B82793927D00F2CDD0 /* UIWindow+Orientation.swift in Sources */,
 				7CD0048E27932A0E00F2CDD0 /* ContentView.swift in Sources */,
 				7CD004AD2793381300F2CDD0 /* GyroscopeViewModel.swift in Sources */,
 				7CD004AF27933E6A00F2CDD0 /* AppState.swift in Sources */,

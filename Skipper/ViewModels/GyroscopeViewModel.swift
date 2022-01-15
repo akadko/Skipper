@@ -33,8 +33,17 @@ class GyroscopeViewModel {
         self.timer = Timer(fire: Date(), interval: interval,
                repeats: true, block: { (timer) in
            if let data = self.motion.deviceMotion {
-             let heel = data.attitude.roll // radians
-             let pitch = data.attitude.pitch // radians
+             let heel: Double, pitch: Double
+             
+             if UIWindow.isLandscape {
+               // revert values to match screen orientation
+               heel = data.attitude.pitch // radians
+               pitch = data.attitude.roll // radians
+             } else {
+               heel = data.attitude.roll // radians
+               pitch = data.attitude.pitch // radians
+             }
+             
              self.appState.gyro.heel = heel * 180 / Double.pi // degrees
              self.appState.gyro.pitch = pitch * 180 / Double.pi // degrees
            }
